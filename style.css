@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --desaturatedRed: hsl(0, 36%, 70%);
+    --softRed: hsl(0, 93%, 68%);
+    --darkGrayishRed: hsl(0, 6%, 24%);
+    /* ### Gradients(Linear 135deg) */
+    --gradient1: hsl(0, 0%, 100%);
+    --gradient2: hsl(0, 100%, 98%);
+    --gradient3: hsl(0, 80%, 86%);
+    --gradient4: hsl(0, 74%, 74%);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    background-color: var(--gradient2);
+    color: var(--desaturatedRed);
+    height: 800px;
+    width: 375px;
+    /* border: 1px solid blue; */
+}
+
+.logo {
+    background-image: url(./images/logo.svg);
+    background-repeat: no-repeat;
+    background-color: var(--gradient1);
+    background-size: 30%;
+    background-position: 30px;
+    height: 85px;
+}
+
+.image {
+    background-image: url(./images/hero-mobile.jpg);
+    height: 250px;
+}
+
+.text {
+    height: 465px;
+}
+
+.title {
+    color: var(--darkGrayishRed);
+    padding: 60px 40px 0px;
+    text-align: center;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    line-height: 1.05em;
+}
+
+.title-special {
+    color: var(--desaturatedRed);
+    font-weight: 300;
+}
+
+.description {
+    padding: 20px 30px;
+    text-align: center;
+    font-size: .9em;
+    font-weight: 600;
+    line-height: 1.5em;
+}
+
+.form {
+    /* border: 1px solid blue; */
+    height: 100px;
+    margin: 8px 0px;
+    padding: 0px 30px;
+    position: relative;
+}
+
+.form-email {
+    background-color: var(--gradient2);
+    /* Hecho usando JavaScript */
+    /* background-image: url(./images/icon-error.svg); */
+    background-repeat: no-repeat;
+    background-position: 210px 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    outline: none;
+    border: 1px solid var(--desaturatedRed);
+    border-radius: 50px;
+    height: 50px;
+    width: 310px;
+    padding-left: 20px;
+    color: var(--desaturatedRed);
+    /* margin: 0px 30px; */
+}
+
+.form-email::placeholder {
+    color: var(--desaturatedRed);
+    /* font-weight: 400; */
+}
+
+.form-image {
+    position: absolute;
+    background: linear-gradient(135deg, var(--gradient3), var(--gradient4));
+    right: 30px;
+    height: 50px;
+    width: 65px;
+    border-radius: 50px;
+    padding: 15px 25px;
+}
+
+.form-image:hover {
+    background: linear-gradient(135deg, var(--gradient2), var(--gradient4));
+}
+
+.form-error {
+    color: var(--softRed);
+    font-size: 13px;
+    padding: 8px 0px 0px 20px;
+}
+
+@media screen and (min-width: 1440px) {
+
+    .main {
+        position: relative;
+        height: 800px;
+        width: 1440px;
+        background-image: url(./images/bg-pattern-desktop.svg);
+    }
+
+    .logo {
+        width: 830px;
+        background-color: hsla(0, 0%, 100%, 0);
+        background-size: 25%;
+        margin: 50px 150px;
+    }
+
+    .image {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-image: url(./images/hero-desktop.jpg);
+        width: 610px;
+        height: 100%;
+    }
+
+    .text {
+        height: 500px;
+        width: 480px;
+        /* border: 1px solid blue; */
+        margin-left: 150px;
+        padding-left: 20px;
+        padding: 0px;
+    }
+
+    .title,
+    .description,
+    .form {
+        text-align: left;
+        /* padding-left: 20px; */
+        padding: 30px 0px 0px 20px;
+    }
+
+    .title {
+        font-size: 4em;
+    }
+
+    .description {
+        font-size: 1em;
+        line-height: 1.8em;
+    }
+
+    .form {
+        text-align: left;
+        padding: 40px 0px 0px 20px;
+    }
+
+    .form-email {
+        background-position: 310px 15px;
+        height: 55px;
+        width: 445px;
+    }
+
+    .form-image {
+        right: 10px;
+        height: 55px;
+        width: 100px;
+        padding: 15px 40px;
+    }
+
+    .form-email {
+        font-size: 16px;
+    }
+
+    .form-error {
+        padding: 15px 0px 0px 20px;
+        font-size: 15px;
+    }
+}
+
+/* .attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+} */
